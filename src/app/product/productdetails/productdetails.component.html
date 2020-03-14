@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row justify-content-end">
+    <div class="col-md-1">
+      <button routerLink="/Addproduct"  class="btn btn-primary">ADD</button>
+    </div>
+  </div>
+  <div class=" p-3 pb-0">
+      <table class="card" class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">SNO</th>
+              <th scope="col">NAME</th>
+              <th scope="col">PRICE(RS)</th>
+              <th scope="col">TOTALCOUND</th>
+              <th scope="col">EDIT</th>
+              <th scope="col">DELET</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let x of productdetails;index as i'>
+              <th scope="row">{{i+1}}</th>
+              <td>{{x.name}}</td>
+              <td>{{x.price}}</td>
+              <td>{{x.count}}</td>          
+              <td><button  (click)="handealClick(x)" class="btn btn-secondary">EDIT</button>
+              </td>
+              <td><button type="button" (click)="deleteproduct(x)" class="btn btn-danger">DELET</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+  
+</div>

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <div class="row mt-5  justify-content-center">
+        <div class="col-md-3">
+            <h3>EDIT PRODUCTES</h3>
+        </div>
+    </div>
+    <div class="row  justify-content-center" >
+        <div class="col-md-3" *ngIf="productdetails">
+          <app-product-form [product]="productdetails" (update)="onUpdate($event)"></app-product-form>
+        </div>
+    </div>
+</div>
